@@ -1,0 +1,12 @@
+version: '3.3'
+
+services:
+  servwebimg:
+    build: .
+    image: webimg
+    ports:
+       - 80:80
+
+  webimgtag:
+    build: .
+    image: thamizhvanis/webimg
