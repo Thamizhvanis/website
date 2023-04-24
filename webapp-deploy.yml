@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapp-deployment1
+spec:
+  selector:
+    matchLabels:
+      app: website
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: website
+    spec:
+      containers:
+      - name: webapp
+        image: docker.io/thamizhvanis/webimg:latest
+        ports:
+        - containerPort: 80
